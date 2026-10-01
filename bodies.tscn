@@ -14,6 +14,7 @@ radius = 0.1496351
 [node name="BouncingBallDemo" type="Node3D" parent="." unique_id=1599783364]
 
 [node name="Platform" type="Node3D" parent="BouncingBallDemo" unique_id=1582131012]
+transform = Transform3D(0.99849856, 0.054779194, 0, -0.054779194, 0.99849856, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="BouncingBallDemo/Platform" unique_id=1861958662]
 size = Vector3(1, 0.34521484, 1)
@@ -35,6 +36,7 @@ radius = 0.24120207
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1272397794]
 transform = Transform3D(0.93137974, -0.09534713, 0.3513414, 0, 0.9650931, 0.26190725, -0.36404923, -0.24393511, 0.89886814, 0.6742176, 0.9021609, 1.8264027)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=158281696]
 transform = Transform3D(1, 0, 0, 0, 0.47180453, 0.8817032, 0, -0.8817032, 0.47180453, 0, 1.7585849, 0.3829584)
