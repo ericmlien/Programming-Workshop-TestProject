@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dc1ry0yw6wkyy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l16ms"]
+size = Vector3(1, 0.33642578, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l16ms"]
+bounce = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l16ms"]
+radius = 0.1496351
+
+[node name="Bodies" type="Node3D" unique_id=1994731926]
+
+[node name="BouncingBallDemo" type="Node3D" parent="." unique_id=1599783364]
+
+[node name="Platform" type="Node3D" parent="BouncingBallDemo" unique_id=1582131012]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BouncingBallDemo/Platform" unique_id=1861958662]
+size = Vector3(1, 0.34521484, 1)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BouncingBallDemo/Platform" unique_id=1625330607]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BouncingBallDemo/Platform/StaticBody3D" unique_id=434819320]
+shape = SubResource("BoxShape3D_l16ms")
+
+[node name="BouncyBall" type="RigidBody3D" parent="BouncingBallDemo" unique_id=1181354227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9334645, 0)
+physics_material_override = SubResource("PhysicsMaterial_l16ms")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BouncingBallDemo/BouncyBall" unique_id=1924814725]
+shape = SubResource("SphereShape3D_l16ms")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="BouncingBallDemo/BouncyBall" unique_id=1676481939]
+radius = 0.24120207
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1272397794]
+transform = Transform3D(0.93137974, -0.09534713, 0.3513414, 0, 0.9650931, 0.26190725, -0.36404923, -0.24393511, 0.89886814, 0.6742176, 0.9021609, 1.8264027)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=158281696]
+transform = Transform3D(1, 0, 0, 0, 0.47180453, 0.8817032, 0, -0.8817032, 0.47180453, 0, 1.7585849, 0.3829584)
