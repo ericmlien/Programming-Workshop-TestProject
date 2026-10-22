@@ -34,6 +34,9 @@ size = Vector3(1.5, 0.5, 10)
 resource_name = "capsule_character"
 script/source = "extends CharacterBody3D
 
+# Hello programmer!!!!!
+# Pls change this to be an export variable!!!
+var kick_force: int = 2
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -72,7 +75,7 @@ func _physics_process(delta: float) -> void:
 		var collider = collision.get_collider()
 		if collider is RigidBody3D:
 			var kick_direction = -collision.get_normal()
-			collider.apply_central_impulse(kick_direction * 2)
+			collider.apply_central_impulse(kick_direction * kick_force)
 		
 "
 
